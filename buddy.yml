@@ -1,13 +1,11 @@
 - pipeline: "Build!"
   trigger_mode: "ON_EVERY_PUSH"
-  ref_name: "master"
-  ref_type: "BRANCH"
   actions:
   - action: "Build on Ubuntu 16 (Xenial)"
     type: "DOCKERFILE"
     login: "jleeothon"
     password: "${DOCKER_PASSWORD}"
-    docker_image_tag: "ubuntu16-04-${BUDDY_EXECUTION_TAG},ubuntu16-04-${BUDDY_EXECUTION_BRANCH}"
+    docker_image_tag: "ubuntu16-04-${BUDDY_PIPELINE_REF_NAME"
     dockerfile_path: "Dockerfile"
     repository: "jleeothon/corto-install-runner"
     build_args:
