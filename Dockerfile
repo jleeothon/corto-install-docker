@@ -1,4 +1,6 @@
-FROM ubuntu:16.04
+ARG VERSION
+
+FROM ubuntu:${VERSION}
 
 RUN \
 DEBIAN_FRONTEND=noninteractive \
